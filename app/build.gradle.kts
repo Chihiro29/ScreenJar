@@ -39,6 +39,7 @@ android {
     // ✅ Compose ENABLED (ONLY ONCE)
     buildFeatures {
         compose = true
+        buildConfig = true
     }
 
     // ✅ Compose compiler version (MUST be inside android {})
@@ -62,6 +63,10 @@ dependencies {
     // ✅ REQUIRED FOR STEP 9 (FIXES YOUR ERRORS)
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.6")
     implementation("androidx.compose.runtime:runtime-livedata")
+
+    // Coil for image loading
+    implementation("io.coil-kt:coil-compose:2.6.0")
+    implementation("io.coil-kt:coil-gif:2.6.0")
 
     // Testing
     testImplementation(libs.junit)
